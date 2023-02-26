@@ -2,11 +2,11 @@ name: project_dev
 on:
   push:
     branches:
-      - master
+      - main
       - testing
   pull_request:
     branches:
-      - master
+      - main
       - testing
 
 jobs:
