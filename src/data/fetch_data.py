@@ -10,7 +10,7 @@ response = requests.get(url)
 
 if response.status_code == 200:
     data = json.loads(response.text)
-    with open('../../data/raw/air/neobdelani_podatki.json', 'w') as f:
+    with open('data/raw/air/neobdelani_podatki.json', 'w') as f:
         json.dump(data, f)
 else:
     print(f"Error: {response.status_code}")
@@ -29,5 +29,4 @@ else:
 #     print(f"Error: {response.status_code}")
 
 
-# df.to_csv('../../data/processed/air/obdelani_podatki.csv')
 
