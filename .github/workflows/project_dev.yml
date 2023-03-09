@@ -9,7 +9,7 @@ on:
       - main
       - testing
   schedule:
-    - cron: '0 16 * * *'
+    - cron: '16 16 * * *'
 
 jobs:
   build:
