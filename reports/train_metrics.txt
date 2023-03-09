@@ -1,3 +1,3 @@
-mean_absolute_error: 3.3924757924648623
-mean_squared_error: 18.64754421116687
-explained_variance_score: 0.9275502951369885
+mean_absolute_error: 3.4889591871031884
+mean_squared_error: 17.670210507114604
+explained_variance_score: 0.9099437277886655

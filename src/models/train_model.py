@@ -2,8 +2,10 @@ import pandas as pd
 import numpy as np
 import pickle
 
-df = pd.read_csv("../../data/processed/obdelani_podatki.csv", sep="," , decimal=".", index_col=0)
-df.head()
+df = pd.read_csv("../../data/processed/obdelani_podatki.csv", sep="," , decimal=".", index_col=False)
+
+# print(df.head().columns)
+
 
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
@@ -13,6 +15,8 @@ from sklearn.metrics import explained_variance_score
 
 df_vhod = df.drop('pm10', axis = 1)
 df_izhod = df['pm10']
+
+# print(df_vhod.head().columns)
 
 X_train, X_test, y_train, y_test = train_test_split(df_vhod, df_izhod, test_size=0.3, random_state=1234)
 

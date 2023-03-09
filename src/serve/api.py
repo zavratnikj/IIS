@@ -13,7 +13,7 @@ with open(MODEL_PATH, 'rb') as f:
 def predict():
     data = request.get_json()
 
-    input_data = [[data['no2'], data['pm2.5'], data['benzen'], data['year'], data['month'], data['day'], data['hour']]]
+    input_data = [[data['no2'], data['pm2.5'], data['benzen'], data['temp'], data['pressure'], data['humidity'], data['wind_speed'], data['year'], data['month'], data['day'], data['hour']]]
 
     prediction = model.predict(input_data)
 

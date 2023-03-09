@@ -16,9 +16,7 @@ for item in data['list']:
         'temp': item['main']['temp'],
         'pressure': item['main']['pressure'],
         'humidity': item['main']['humidity'],
-        'wind_speed': item['wind']['speed'],
-        'weather_main': item['weather'][0]['main'],
-        'weather_description': item['weather'][0]['description']
+        'wind_speed': item['wind']['speed']
     }
     rows.append(row)
 
@@ -26,15 +24,6 @@ for item in data['list']:
 df = pd.DataFrame(rows)
 
 df['temp'] = df['temp'].apply(lambda x: x - 273.15)
-
-weather_main_dummies = pd.get_dummies(df['weather_main'], prefix='weather_main')
-weather_description_dummies = pd.get_dummies(df['weather_description'], prefix='weather_description')
-
-# Concatenate the dummy variables with the original dataframe
-df = pd.concat([df, weather_main_dummies, weather_description_dummies], axis=1)
-
-# Drop the original weather_main and weather_description columns
-df = df.drop(['weather_main', 'weather_description'], axis=1)
 
 df['year'] = df['datetime'].dt.year
 df['month'] = df['datetime'].dt.month
