@@ -5,17 +5,6 @@ import numpy as np
 import pprint
 import process_data
 
-# url = "https://arsoxmlwrapper.app.grega.xyz/api/air/archive"
-#
-# response = requests.get(url)
-#
-# if response.status_code == 200:
-#     data = json.loads(response.text)
-#     with open('data/raw/air/neobdelani_podatki.json', 'w') as f:
-#         json.dump(data, f)
-# else:
-#     print(f"Error: {response.status_code}")
-
 first_date_unix = process_data.first_date_unix
 last_date_unix = process_data.last_date_unix
 

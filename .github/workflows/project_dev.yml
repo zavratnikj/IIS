@@ -9,7 +9,7 @@ on:
       - main
       - testing
   schedule:
-    - cron: '16 16 * * *'
+    - cron: '0 12,24 * * *'
 
 jobs:
   build:
@@ -28,4 +28,7 @@ jobs:
       - name: Pytest testing
         run: pytest
       - name: Fetch data
-        run: python src/data/fetch_data.py
+        run: python src/data/fetch_data_air.py
+          python src/data/process_data_air.py
+          python src/data/fetch_data_weather.py
+          python src/data/process_data_weather.py
