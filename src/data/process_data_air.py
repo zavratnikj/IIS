@@ -50,7 +50,6 @@ first_date_unix = int(first_date.timestamp())
 last_date = df['datum_od'].iloc[-1]
 last_date_unix = int(last_date.timestamp())
 
-print(first_date_unix)
-print(last_date_unix)
-
 df.drop(['datum_od'], axis=1, inplace=True)
+
+df.to_csv('data/processed/air/obdelani_podatki_air.csv', index=False)
