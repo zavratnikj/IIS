@@ -5,7 +5,7 @@ import numpy as np
 import pprint
 
 MB_Titova = []
-jsonFile = open('../../data/raw/air/neobdelani_podatki.json', 'r')
+jsonFile = open('data/raw/air/neobdelani_podatki.json', 'r')
 values = json.load(jsonFile)
 for val in values:
     json_object = json.loads(val["json"])

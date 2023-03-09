@@ -3,7 +3,6 @@ import requests
 import pandas as pd
 import numpy as np
 import pprint
-import process_data
 
 url = "https://arsoxmlwrapper.app.grega.xyz/api/air/archive"
 
