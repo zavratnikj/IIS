@@ -28,7 +28,8 @@ jobs:
       - name: Pytest testing
         run: pytest
       - name: Fetch data
-        run: python src/data/fetch_data_air.py
+        run: | 
+          python src/data/fetch_data_air.py
           python src/data/process_data_air.py
           python src/data/fetch_data_weather.py
           python src/data/process_data_weather.py
