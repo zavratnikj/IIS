@@ -32,4 +32,5 @@ jobs:
           python src/data/fetch_data_air.py && \
           python src/data/process_data_air.py && \
           python src/data/fetch_data_weather.py && \
-          python src/data/process_data_weather.py
+          python src/data/process_data_weather.py && \
+          python src/data/process_data.py
